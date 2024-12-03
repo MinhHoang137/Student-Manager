@@ -183,7 +183,7 @@ class MainActivity : AppCompatActivity(), OnStudentItemClickListener {
         v: View?,
         menuInfo: ContextMenu.ContextMenuInfo?
     ) {
-        super.onCreateContextMenu(menu, v, menuInfo)
+        //super.onCreateContextMenu(menu, v, menuInfo)
         if (v?.id == R.id.recycler_view_students) {
             menuInflater.inflate(R.menu.main_menu, menu)
         }
@@ -204,7 +204,6 @@ class MainActivity : AppCompatActivity(), OnStudentItemClickListener {
             R.id.action_delete -> {
                 Log.d("Delete", "Position: $position")
                 Remove(students[position], position)
-
             }
         }
         return super.onContextItemSelected(item)
